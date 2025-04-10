@@ -3,7 +3,7 @@ import TextInput from './TextInput';
 import SendButton from './SendButton';
 import './MessageInput.css';
 
-function MessageInput({ onSend }: { onSend: any }) {
+function MessageInput({ onSend }: { onSend: (_text:string) => void }) {
     const [text, setText] = useState('');
 
     const handleSend = () => {
